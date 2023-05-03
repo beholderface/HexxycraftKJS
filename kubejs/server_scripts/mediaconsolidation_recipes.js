@@ -11,10 +11,11 @@ ServerEvents.recipes(event => {
 	event.recipes.createDeploying('kubejs:amethyst_protocrystals', ['kubejs:amethyst_protocrystals', '#hexcasting:staves']).keepHeldItem(),
 	event.recipes.createPressing('kubejs:amethyst_protocrystals', 'kubejs:amethyst_protocrystals')
 ]).transitionalItem('kubejs:amethyst_protocrystals').loops(4)
-
-	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 100)], ['hexcasting:amethyst_dust']).heated()
-	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 500)], ['hexcasting:amethyst_dust']).heated()
-	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 1000)], ['hexcasting:charged_amethyst']).heated()
+	
+	//why the fuck do these numbers have to be so far off from what the recipe ends up being ingame
+	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 8100)], ['hexcasting:amethyst_dust']).heated()
+	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 40500)], ['minecraft:amethyst_shard']).heated()
+	event.recipes.create.mixing([Fluid.of('kubejs:liquid_media', 81000)], ['hexcasting:charged_amethyst']).heated()
 	
 	event.custom(
 		{
