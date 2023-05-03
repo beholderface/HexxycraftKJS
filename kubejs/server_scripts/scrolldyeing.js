@@ -15,7 +15,7 @@ BlockEvents.rightClicked("create:depot", event => {
 					if(heldNBT.tag.op_id == undefined){
 						event.cancel();
 						//console.info("Not currently an ancient scroll. Applying pigment.");
-						event.server.runCommandSilent(`playsound minecraft:entity.item.pickup master @a ${x} ${y} ${z} 0.25`)
+						event.server.runCommandSilent(`playsound minecraft:entity.item.pickup block @a ${x} ${y} ${z} 0.25`)
 						event.server.runCommandSilent(`data modify block ${x} ${y} ${z} HeldItem.Item.tag.op_id set value "counterfeit:scroll"`)
 						//only set the display name if it has not already been modified
 						if(heldNBT.tag.display == undefined){
@@ -37,7 +37,7 @@ BlockEvents.rightClicked("create:depot", event => {
 			if(heldNBT.tag != undefined){
 				if(heldNBT.tag.op_id == "counterfeit:scroll"){
 					event.cancel();
-					event.server.runCommandSilent(`playsound minecraft:entity.item.pickup master @a ${x} ${y} ${z} 0.25`)
+					event.server.runCommandSilent(`playsound minecraft:entity.item.pickup block @a ${x} ${y} ${z} 0.25`)
 					event.server.runCommandSilent(`data remove block ${x} ${y} ${z} HeldItem.Item.tag.op_id`)
 					if(heldNBT.tag.display.Name == "{\"text\":\"Counterfeit Ancient Scroll\"}"){
 						event.server.runCommandSilent(`data remove block ${x} ${y} ${z} HeldItem.Item.tag.display.Name`)
