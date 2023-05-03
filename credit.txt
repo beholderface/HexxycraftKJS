@@ -1,0 +1,2 @@
+All the scripts in here by me (beholderface)
+I created the item textures by applying distortion effects to vanilla Minecraft's amethyst shard texture (not sure who made that one off the top of my head, maybe JAPPA?), and Hexcasting's amethyst dust texture (by Falkory)
